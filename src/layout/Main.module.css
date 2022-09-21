@@ -1,0 +1,19 @@
+.siteMainLayout {
+  height: 100%;
+}
+
+.siteLogo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.siteContentSide {
+  height: 100%;
+  display: flex;
+}
+
+.siteContent {
+  margin: 24px 16px 0;
+  flex: 1 1 auto;
+}
