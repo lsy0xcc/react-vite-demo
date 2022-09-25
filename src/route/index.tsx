@@ -3,15 +3,14 @@ import {
   Navigate,
   RouterProvider,
 } from 'react-router-dom';
-import About from '../pages/About';
-import Users from '../pages/Users';
-import Videos from '../pages/Videos';
+import About from '../page/About';
+import Users from '../page/Users';
 
 export default function Routes() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Navigate to="/user" replace={true}></Navigate>,
+      element: <Navigate to="/about" replace={true}></Navigate>,
     },
     {
       path: '/user',
@@ -20,10 +19,6 @@ export default function Routes() {
     {
       path: '/about',
       element: <About></About>,
-    },
-    {
-      path: 'videos',
-      element: <Videos></Videos>,
     },
   ]);
   return <RouterProvider router={router} />;

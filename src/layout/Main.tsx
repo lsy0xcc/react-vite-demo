@@ -2,7 +2,7 @@
 import { Button, Layout } from 'antd';
 import axios from 'axios';
 import { useState } from 'react';
-import Routes from '../routes';
+import Routes from '../route';
 import style from './Main.module.css';
 import MainHeader from './MainHeader';
 import MainMenu from './MainMenu';

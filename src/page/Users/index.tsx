@@ -1,7 +1,7 @@
 import { useRequest } from 'ahooks';
 import { Button } from 'antd';
 import { useState } from 'react';
-import service from '../../services/main';
+import service from '../../service/main';
 
 export default function Users() {
   const [text, setText] = useState('Click me!');

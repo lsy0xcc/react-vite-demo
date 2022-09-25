@@ -13,3 +13,17 @@
 5. eslintrc.cjs .prettierrc
 
 6. vite.config.ts (set proxy)
+
+7. change settings.json in VSCode
+
+```
+{
+  "material-icon-theme.activeIconPack": "react_redux",
+  "material-icon-theme.folders.theme": "specific",
+  "material-icon-theme.hidesExplorerArrows": false,
+  "material-icon-theme.folders.associations": {
+    "component": "Components",
+    "route": "Routes"
+  }
+}
+```
