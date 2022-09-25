@@ -1,4 +1,4 @@
-import {Header} from 'antd/lib/layout/layout';
+import { Header } from 'antd/lib/layout/layout';
 import style from './MainHeader.module.css';
 
 export default function MainHeader() {

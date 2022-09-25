@@ -1,15 +1,12 @@
-/* eslint-disable node/no-extraneous-import */
-import { Button, Layout } from 'antd';
-import axios from 'axios';
-import { useState } from 'react';
-import Routes from '../route';
+import { Layout } from 'antd';
+import { Outlet } from 'react-router-dom';
 import style from './Main.module.css';
 import MainHeader from './MainHeader';
 import MainMenu from './MainMenu';
 
 const { Content, Footer, Sider } = Layout;
 
-export default () => {
+export default function MainLayout() {
   return (
     <Layout className={style.siteMainLayout}>
       <Sider breakpoint="lg" collapsedWidth="0">
@@ -19,10 +16,10 @@ export default () => {
       <Layout className={style.siteContentSide}>
         <MainHeader />
         <Content className={style.siteContent}>
-          <Routes />
+          <Outlet />
         </Content>
         <Footer style={{ textAlign: 'center' }}>Footer</Footer>
       </Layout>
     </Layout>
   );
-};
+}

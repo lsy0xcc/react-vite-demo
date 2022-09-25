@@ -3,7 +3,7 @@ import {
   UserOutlined,
   VideoCameraOutlined,
 } from '@ant-design/icons';
-import {Menu} from 'antd';
+import { Menu } from 'antd';
 import React from 'react';
 export default function MainMenu() {
   return (
