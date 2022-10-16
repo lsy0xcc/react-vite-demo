@@ -1,4 +1,8 @@
 {
   "singleQuote": true,
-  "trailingComma": "all"
+  "trailingComma": "all",
+  "react/jsx-wrap-multilines": [
+    "error",
+    { "arrow": true, "return": true, "declaration": true }
+  ]
 }

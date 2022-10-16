@@ -1,10 +1,12 @@
 import { ReactNode } from 'react';
 import { Navigate } from 'react-router-dom';
 
-export default function Auth(props: { children: ReactNode }) {
-  if (localStorage.getItem('access_token') !== null) {
-    return <>{props.children}</>;
-  } else {
-    return <Navigate to="/login"></Navigate>;
-  }
+export default function AuthGuard(props: { children: ReactNode }) {
+  const { children } = props;
+  return localStorage.getItem('access_token') === null ? (
+    // eslint-disable-next-line react/jsx-no-useless-fragment
+    <>{children}</>
+  ) : (
+    <Navigate to="/login" />
+  );
 }

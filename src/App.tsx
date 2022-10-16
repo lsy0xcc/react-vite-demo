@@ -5,6 +5,6 @@ import Route from './route';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Route></Route>
+    <Route />
   </React.StrictMode>,
 );

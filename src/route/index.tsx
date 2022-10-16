@@ -10,7 +10,7 @@ import About from '../page/About';
 import CommonError from '../page/CommonError';
 import Login from '../page/Login';
 import Users from '../page/Users';
-import AuthGuard from './guard/auth.guard';
+import AuthGuard from './guard/Auth.guard';
 
 export default function Routes() {
   // const router = createBrowserRouter([
@@ -19,7 +19,7 @@ export default function Routes() {
       <Route>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Main />} errorElement={<CommonError />}>
-          <Route path="" element={<Navigate to="/about" replace={true} />} />
+          <Route path="" element={<Navigate to="/about" replace />} />
           <Route
             path="users"
             element={
@@ -29,9 +29,9 @@ export default function Routes() {
             }
           />
           <Route path="about" element={<About />} />
-          <Route path="*" element={<Navigate to="/about" replace={true} />} />
+          <Route path="*" element={<Navigate to="/about" replace />} />
         </Route>
-        <Route path="*" element={<Navigate to="/about" replace={true} />} />
+        <Route path="*" element={<Navigate to="/about" replace />} />
       </Route>,
     ),
   );
