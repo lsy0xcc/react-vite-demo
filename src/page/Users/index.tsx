@@ -15,7 +15,6 @@ export default function Users() {
       const res = await runAsync();
       setText(res.data);
     } catch (e) {
-      console.error(e);
       setText('error');
     }
   };

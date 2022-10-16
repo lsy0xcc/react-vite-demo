@@ -4,3 +4,23 @@ body,
 #root {
   height: 100%;
 }
+
+.default-modal .ant-modal-content {
+  border-radius: 8px;
+}
+.default-modal .ant-modal-confirm-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.default-modal .ant-modal-confirm-btns .ant-btn-primary,
+.default-modal .ant-modal-confirm-btns .ant-btn-primary:active,
+.default-modal .ant-modal-confirm-btns .ant-btn-primary:focus,
+.default-modal .ant-modal-confirm-btns .ant-btn-primary:hover {
+  border-color: #bf0000;
+  background: #bf0000;
+}
+
+.default-modal-title-normal .ant-modal-confirm-title {
+  font-weight: normal;
+}
