@@ -1,21 +1,17 @@
 import { Button } from 'antd';
-import showErrorModal from '../../util/showErrorModal';
-import style from './index.module.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function About() {
-  const showMyModal = () => {
-    showErrorModal({});
-  };
-  const showMyModalWithProp = () => {
-    showErrorModal({}, { titleBold: false });
+  const navigate = useNavigate();
+  const logout = () => {
+    localStorage.removeItem('access_token');
+    navigate('/login');
   };
   return (
-    <div className={style.mainContainer}>
-      About
-      <Button onClick={showMyModal}> show error modal with bold title</Button>
-      <Button onClick={showMyModalWithProp}>
-        show error modal with normal title
-      </Button>
+    <div>
+      <p>About</p>
+      <p>This page is protected by auth gurad</p>
+      <Button onClick={logout}>logout</Button>
     </div>
   );
 }

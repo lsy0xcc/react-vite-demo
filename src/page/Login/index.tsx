@@ -1,3 +1,16 @@
+import { Button } from 'antd';
+import { useNavigate } from 'react-router-dom';
+
 export default function Login() {
-  return <div>Login</div>;
+  const navigate = useNavigate();
+  const login = () => {
+    localStorage.setItem('access_token', 'token');
+    navigate('/about');
+  };
+  return (
+    <div>
+      Login
+      <Button onClick={login}>click to log in</Button>
+    </div>
+  );
 }

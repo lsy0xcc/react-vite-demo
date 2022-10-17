@@ -13,7 +13,7 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
-    indent: ['error', 2],
+    indent: ['error', 2, { SwitchCase: 1 }],
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     'react/react-in-jsx-scope': 'off',
@@ -21,5 +21,7 @@ module.exports = {
       'error',
       { declaration: false, assignment: false },
     ],
+
+    'no-console': 'off',
   },
 };

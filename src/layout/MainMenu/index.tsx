@@ -1,27 +1,39 @@
-import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from '@ant-design/icons';
+import { BorderlessTableOutlined, EditOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
-import React from 'react';
+import { ItemType } from 'antd/lib/menu/hooks/useItems';
+import { useNavigate } from 'react-router-dom';
 
 export default function MainMenu() {
+  const navigate = useNavigate();
+
+  const items: ItemType[] = [
+    {
+      icon: <EditOutlined />,
+      key: 'playground',
+      label: 'Playground',
+    },
+    {
+      icon: <BorderlessTableOutlined />,
+      key: 'about',
+      label: 'About',
+    },
+  ];
+
+  const onMenuSelect = ({ ...args }) => {
+    switch (args.key) {
+      case 'playground':
+        navigate('/playground');
+        break;
+      case 'about':
+        navigate('/about');
+        break;
+      default:
+        navigate('/');
+        break;
+    }
+  };
+
   return (
-    <Menu
-      theme="dark"
-      mode="inline"
-      defaultSelectedKeys={['4']}
-      items={[
-        UserOutlined,
-        VideoCameraOutlined,
-        UploadOutlined,
-        UserOutlined,
-      ].map((icon, index) => ({
-        key: String(index + 1),
-        icon: React.createElement(icon),
-        label: `nav ${index + 1}`,
-      }))}
-    />
+    <Menu theme="dark" mode="inline" items={items} onSelect={onMenuSelect} />
   );
 }
