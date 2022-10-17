@@ -1,5 +1,5 @@
 import { Button } from 'antd';
-import showErrorModal from '../../util/show-error-modal';
+import showErrorModal from '../../util/showErrorModal';
 import style from './index.module.css';
 
 export default function About() {

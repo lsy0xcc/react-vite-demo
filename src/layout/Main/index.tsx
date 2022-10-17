@@ -1,8 +1,8 @@
 import { Layout } from 'antd';
 import { Outlet } from 'react-router-dom';
-import style from './Main.module.css';
-import MainHeader from './MainHeader';
-import MainMenu from './MainMenu';
+import style from './index.module.css';
+import MainHeader from '../MainHeader';
+import MainMenu from '../MainMenu';
 
 const { Content, Footer, Sider } = Layout;
 
