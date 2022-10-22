@@ -15,5 +15,13 @@ export default defineConfig({
   },
   css: {
     devSourcemap: true,
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+        modifyVars: {
+          '@primary-color': '#00cccc', //设置antd主题色
+        },
+      },
+    },
   },
 });

@@ -33,7 +33,5 @@ export default function MainMenu() {
     }
   };
 
-  return (
-    <Menu theme="dark" mode="inline" items={items} onSelect={onMenuSelect} />
-  );
+  return <Menu mode="inline" items={items} onSelect={onMenuSelect} />;
 }

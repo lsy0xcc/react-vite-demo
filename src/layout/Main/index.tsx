@@ -9,7 +9,7 @@ const { Content, Footer, Sider } = Layout;
 export default function MainLayout() {
   return (
     <Layout className={style.siteMainLayout}>
-      <Sider breakpoint="lg" collapsedWidth="0">
+      <Sider breakpoint="lg" collapsedWidth="0" theme="light">
         <div className={style.siteLogo} />
         <MainMenu />
       </Sider>
