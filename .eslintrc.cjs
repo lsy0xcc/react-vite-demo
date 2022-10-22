@@ -21,6 +21,7 @@ module.exports = {
       'error',
       { declaration: false, assignment: false },
     ],
+    'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
 
     'no-console': 'off',
   },
