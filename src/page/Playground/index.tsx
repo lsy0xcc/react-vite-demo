@@ -1,27 +1,11 @@
-import { useRequest } from 'ahooks';
 import { Button, Slider } from 'antd';
-import { useState } from 'react';
-import service from '../../service/main';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { updateValue } from '../../store/slicer/unreadSlicer';
 import showErrorModal from '../../util/showErrorModal';
+import AhooksRequest from './component/ahooksRequest';
 import style from './index.module.css';
 
 export default function Users() {
-  const [text, setText] = useState('Click me!');
-  const { loading, runAsync } = useRequest(
-    () => service.get('/long-time-hello'),
-    { manual: true },
-  );
-  const onButtonClick = async () => {
-    try {
-      const res = await runAsync();
-      setText(res.data);
-    } catch (e) {
-      setText('error');
-    }
-  };
-
   const showMyModal = () => {
     showErrorModal({});
   };
@@ -39,13 +23,7 @@ export default function Users() {
     <div>
       <div className={style.mainContainer}>
         <h1>Playground</h1>
-
-        <div>
-          <h2>ahooks</h2>
-          <Button type="primary" onClick={onButtonClick}>
-            {loading ? 'loading' : text}
-          </Button>
-        </div>
+        <AhooksRequest />
 
         <div>
           <h2>modal</h2>

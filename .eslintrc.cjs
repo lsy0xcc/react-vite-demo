@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['airbnb', 'airbnb/hooks', 'airbnb-typescript'],
+  extends: ['airbnb', 'airbnb/hooks', 'airbnb-typescript', 'prettier'],
   overrides: [],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -17,11 +17,12 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     'react/react-in-jsx-scope': 'off',
-    'react/jsx-wrap-multilines': [
-      'error',
-      { declaration: false, assignment: false },
-    ],
-    'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
+    // 'react/jsx-wrap-multilines': [
+    //   'error',
+    //   { declaration: false, assignment: false },
+    // ],
+    // 'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
+    // 'implicit-arrow-linebreak': 'off',
 
     'no-console': 'off',
   },
