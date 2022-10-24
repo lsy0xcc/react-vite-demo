@@ -1,16 +1,21 @@
 import { Button, Slider } from 'antd';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { updateValue } from '../../store/slicer/unreadSlicer';
+import ErrorModalType from '../../util/ErrorModalType';
 import showErrorModal from '../../util/showErrorModal';
 import AhooksRequest from './component/ahooksRequest';
 import style from './index.module.css';
 
 export default function Users() {
   const showMyModal = () => {
-    showErrorModal({});
+    showErrorModal(ErrorModalType.COMMON_ERROR, { title: 'error' }, {});
   };
   const showMyModalWithProp = () => {
-    showErrorModal({}, { titleBold: false });
+    showErrorModal(
+      ErrorModalType.TITLE_BOLD_ERROR,
+      { title: 'bold' },
+      { titleBold: true },
+    );
   };
 
   const count = useAppSelector((state) => state.unread.value);
