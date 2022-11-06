@@ -25,29 +25,26 @@ export default function Users() {
   };
 
   return (
-    <div>
-      <div className={style.mainContainer}>
-        <h1>Playground</h1>
-        <AhooksRequest />
+    <div className={style.mainContainer}>
+      <h1>Playground</h1>
+      <AhooksRequest />
 
-        <div>
-          <h2>modal</h2>
-          <Button onClick={showMyModal}>
-            show error modal with bold title
-          </Button>
-          <Button onClick={showMyModalWithProp}>
-            show error modal with normal title
-          </Button>
-        </div>
-
-        <div>
-          <h2>
-            redux
-            {count}
-          </h2>
-          <Slider onChange={onSliderChange} />
-        </div>
+      <div>
+        <h2>modal</h2>
+        <Button onClick={showMyModal}>show error modal with bold title</Button>
+        <Button onClick={showMyModalWithProp}>
+          show error modal with normal title
+        </Button>
       </div>
+
+      <div>
+        <h2>
+          redux
+          {count}
+        </h2>
+        <Slider onChange={onSliderChange} />
+      </div>
+      <div>{JSON.stringify(import.meta.env)}</div>
     </div>
   );
 }

@@ -5,7 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:qa": "vite --mode qa",
+    "dev:stg": "vite --mode stg",
+    "dev:prod": "vite --mode prod",
     "build": "tsc && vite build",
+    "build:qa": "tsc && vite build --mode qa",
+    "build:stg": "tsc && vite build --mode stg",
+    "build:prod": "tsc && vite build --mode prod",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -21,6 +27,7 @@
     "react-router-dom": "^6.4.0"
   },
   "devDependencies": {
+    "@types/node": "^18.11.9",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.38.0",

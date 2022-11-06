@@ -33,6 +33,9 @@ export default function Routes() {
         {/* <Route path="*" element={<Navigate to="/about" replace />} /> */}
       </Route>,
     ),
+    {
+      basename: import.meta.env.BASE_URL,
+    },
   );
   return <RouterProvider router={router} />;
 }
