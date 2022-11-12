@@ -5,11 +5,11 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
-import Main from '../layout/Main';
-import About from '../page/About';
-import CommonError from '../page/CommonError';
-import Login from '../page/Login';
-import Playground from '../page/Playground';
+import Main from '../layouts/Main';
+import About from '../pages/About';
+import CommonError from '../pages/CommonError';
+import Login from '../pages/Login';
+import Playground from '../pages/Playground';
 import AuthGuard from './guard/Auth.guard';
 
 export default function Routes() {

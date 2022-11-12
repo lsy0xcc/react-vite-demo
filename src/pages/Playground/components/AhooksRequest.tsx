@@ -1,7 +1,7 @@
 import { useRequest } from 'ahooks';
 import { Button, Input } from 'antd';
 import { useState } from 'react';
-import simpleReq from '../../../service/simpleReq';
+import simpleReq from '../../../services/simpleReq';
 
 export default function AhooksRequest() {
   const [text, setText] = useState('Click me!');

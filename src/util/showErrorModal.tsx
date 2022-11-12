@@ -1,7 +1,7 @@
 import { CloseCircleFilled } from '@ant-design/icons';
 import { Modal, ModalFuncProps } from 'antd';
-import CommomError from '../component/error-modal/CommomError';
-import TitleBoldError from '../component/error-modal/TitleBoldError';
+import CommomError from '../components/error-modal/CommomError';
+import TitleBoldError from '../components/error-modal/TitleBoldError';
 import ErrorModalType from './ErrorModalType';
 
 // the other params which default params can not change
