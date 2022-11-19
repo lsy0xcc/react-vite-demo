@@ -1,5 +1,8 @@
-export default interface FilterItem {
-  key: number;
+export default interface FilterItem<
+  T extends string | number,
+  U extends { [key: string]: any } | undefined = undefined,
+> {
+  value: T;
   label: string;
-  selected: boolean;
+  params?: U;
 }
