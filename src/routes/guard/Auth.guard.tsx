@@ -1,12 +1,11 @@
-import { ReactNode } from 'react';
+import { ReactElement } from 'react';
 import { Navigate } from 'react-router-dom';
 
-export default function AuthGuard(props: { children: ReactNode }) {
+export default function AuthGuard(props: { children: ReactElement }) {
   const { children } = props;
   return localStorage.getItem('access_token') === null ? (
     <Navigate to="/login" />
   ) : (
-    // eslint-disable-next-line react/jsx-no-useless-fragment
-    <>{children}</>
+    children
   );
 }

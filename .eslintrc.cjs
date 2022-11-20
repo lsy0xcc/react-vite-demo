@@ -18,13 +18,7 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     'react/react-in-jsx-scope': 'off',
-    // 'react/jsx-wrap-multilines': [
-    //   'error',
-    //   { declaration: false, assignment: false },
-    // ],
-    // 'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
-    // 'implicit-arrow-linebreak': 'off',
-
+    'no-param-reassign': ['error', { props: false }],
     'no-console': 'off',
   },
 };
