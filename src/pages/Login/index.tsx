@@ -1,4 +1,3 @@
-import { Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
@@ -10,7 +9,9 @@ export default function Login() {
   return (
     <div>
       Login
-      <Button onClick={login}>click to log in</Button>
+      <button type="button" onClick={login}>
+        click to log in
+      </button>
     </div>
   );
 }

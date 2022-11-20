@@ -1,4 +1,3 @@
-import { Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
 export default function About() {
@@ -11,7 +10,9 @@ export default function About() {
     <div>
       <p>About</p>
       <p>This page is protected by auth gurad</p>
-      <Button onClick={logout}>logout</Button>
+      <button type="button" onClick={logout}>
+        logout
+      </button>
     </div>
   );
 }
