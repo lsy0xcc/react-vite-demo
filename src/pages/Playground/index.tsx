@@ -1,9 +1,15 @@
+import { css } from '@emotion/react';
 import Button from '@mui/material/Button';
-import style from './index.module.css';
 
-export default function Users() {
+const mainContainer = css`
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 16px;
+`;
+export default function Playground() {
   return (
-    <div className={style.mainContainer}>
+    <div css={mainContainer}>
       <h1>Playground</h1>
       <h2>env</h2>
       <div>{JSON.stringify(import.meta.env)}</div>

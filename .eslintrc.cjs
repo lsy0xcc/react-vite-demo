@@ -20,5 +20,6 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'no-param-reassign': ['error', { props: false }],
     'no-console': 'off',
+    'react/no-unknown-property': ['error', { ignore: ['css'] }],
   },
 };
