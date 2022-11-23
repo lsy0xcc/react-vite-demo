@@ -1,3 +1,10 @@
+const a11yOff = Object.keys(require('eslint-plugin-jsx-a11y').rules).reduce(
+  (acc, rule) => {
+    acc[`jsx-a11y/${rule}`] = 'off';
+    return acc;
+  },
+  {},
+);
 module.exports = {
   env: {
     browser: true,
@@ -13,6 +20,7 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
+    ...a11yOff,
     indent: 'off',
     '@typescript-eslint/indent': ['error', 2, { SwitchCase: 1 }],
     'linebreak-style': ['error', 'unix'],
