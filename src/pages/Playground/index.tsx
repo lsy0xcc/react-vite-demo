@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import Button from '@mui/material/Button';
+import ApiDialog from './components/ApiDialog';
 
 const mainContainer = css`
   display: flex;
@@ -13,9 +13,7 @@ export default function Playground() {
       <h1>Playground</h1>
       <h2>env</h2>
       <div>{JSON.stringify(import.meta.env)}</div>
-      <div>
-        <Button variant="contained">Hello World</Button>
-      </div>
+      <ApiDialog />
     </div>
   );
 }
