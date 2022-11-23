@@ -10,6 +10,7 @@ import About from '../pages/About';
 import CommonError from '../pages/CommonError';
 import Login from '../pages/Login';
 import Playground from '../pages/Playground';
+import VideoInfo from '../pages/VideoInfo';
 import AuthGuard from './guard/Auth.guard';
 
 export default function Routes() {
@@ -20,6 +21,7 @@ export default function Routes() {
         <Route path="/" element={<Main />} errorElement={<CommonError />}>
           <Route path="" element={<Navigate to="/playground" replace />} />
           <Route path="playground" element={<Playground />} />
+          <Route path="video-info" element={<VideoInfo />} />
           <Route
             path="about"
             element={

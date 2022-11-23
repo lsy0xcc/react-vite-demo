@@ -26,6 +26,9 @@ export default function MainMenu() {
           <Link to="/playground">playground</Link>
         </li>
         <li>
+          <Link to="/video-info">video info</Link>
+        </li>
+        <li>
           <Link to="/about">about</Link>
         </li>
       </ul>
