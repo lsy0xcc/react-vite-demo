@@ -18,11 +18,13 @@ const siteLogo = css`
 `;
 const siteContentSide = css`
   height: 100%;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
 `;
 const siteContent = css`
+  overflow: auto;
   margin: 24px 16px 0;
   flex: 1 1 auto;
 `;
