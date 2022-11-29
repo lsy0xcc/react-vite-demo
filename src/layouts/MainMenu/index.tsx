@@ -29,6 +29,9 @@ export default function MainMenu() {
           <Link to="/video-info">video info</Link>
         </li>
         <li>
+          <Link to="/infinite-load">video info</Link>
+        </li>
+        <li>
           <Link to="/about">about</Link>
         </li>
       </ul>

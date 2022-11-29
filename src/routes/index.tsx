@@ -8,6 +8,7 @@ import {
 import Main from '../layouts/Main';
 import About from '../pages/About';
 import CommonError from '../pages/CommonError';
+import InfiniteLoad from '../pages/InfiniteLoad';
 import Login from '../pages/Login';
 import Playground from '../pages/Playground';
 import VideoInfo from '../pages/VideoInfo';
@@ -22,6 +23,7 @@ export default function Routes() {
           <Route path="" element={<Navigate to="/playground" replace />} />
           <Route path="playground" element={<Playground />} />
           <Route path="video-info" element={<VideoInfo />} />
+          <Route path="infinite-load" element={<InfiniteLoad />} />
           <Route
             path="about"
             element={

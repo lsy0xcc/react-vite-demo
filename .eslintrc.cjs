@@ -29,5 +29,14 @@ module.exports = {
     'no-param-reassign': ['error', { props: false }],
     'no-console': 'off',
     'react/no-unknown-property': ['error', { ignore: ['css'] }],
+    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+    'react/jsx-props-no-spreading': [
+      'error',
+      {
+        html: 'enforce',
+        custom: 'ignore',
+        explicitSpread: 'ignore',
+      },
+    ],
   },
 };

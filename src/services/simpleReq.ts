@@ -26,4 +26,17 @@ export default {
   },
   getHelloUser: async (input = '') =>
     axios.get('/hello-user', { params: { name: input } }),
+  getList: async (pageNo: number, pageSize: number = 10): Promise<any[]> =>
+    new Promise((res) => {
+      setTimeout(() => {
+        const begin = pageSize * (pageNo - 1);
+        const end = begin + pageSize;
+        const result: any[] = [];
+        for (let i = begin; i < end; i++) {
+          result.push({ id: i, name: `item${i}` });
+        }
+        const finalResult = begin >= 100 ? [] : result;
+        res(finalResult);
+      }, 500);
+    }),
 };
